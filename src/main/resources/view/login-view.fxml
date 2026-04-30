@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="CENTER" spacing="40.0" style="-fx-background-color: #006ddb;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iss.controller.LoginController">
+
+<padding>
+    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+</padding>
+
+<ImageView fitWidth="400.0" preserveRatio="true">
+    <image>
+        <Image url="@/images/fcm-logo-main.png" />
+    </image>
+</ImageView>
+
+<VBox alignment="CENTER" maxWidth="400.0" spacing="20.0" style="-fx-background-color: white; -fx-padding: 40px;">
+
+    <TextField fx:id="usernameField" promptText="Username"
+               style="-fx-background-color: #aaaaaa; -fx-text-fill: white; -fx-prompt-text-fill: #eeeeee; -fx-font-size: 18px; -fx-padding: 10px;" />
+
+    <PasswordField fx:id="passwordField" promptText="Password"
+                   style="-fx-background-color: #aaaaaa; -fx-text-fill: white; -fx-prompt-text-fill: #eeeeee; -fx-font-size: 18px; -fx-padding: 10px;" />
+
+    <Button fx:id="loginButton" text="Login"
+            style="-fx-background-color: #006ddb; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 8px 40px;" />
+
+</VBox>
+
+</VBox>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #006ddb;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iss.controller.UpdateTechController">
+
+    <BorderPane prefHeight="150.0">
+        <padding> <Insets top="20" right="40" bottom="20" left="40"/> </padding>
+        <left>
+            <VBox alignment="CENTER_LEFT" spacing="15">
+                <Button fx:id="backBtn" text="&lt; Back to Profile" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 0;"/>
+                <VBox alignment="CENTER_LEFT" spacing="5">
+                    <HBox spacing="5">
+                        <Label text="Logged in as:" style="-fx-text-fill: white; -fx-font-size: 18;"/>
+                        <Label fx:id="usernameLabel" text="[username]" style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold;"/>
+                    </HBox>
+                    <Label fx:id="userTypeLabel" text="[usertype]" style="-fx-text-fill: white; -fx-font-size: 16;"/>
+                </VBox>
+            </VBox>
+        </left>
+        <center>
+            <ImageView fitHeight="80.0" preserveRatio="true">
+                <image> <Image url="@/images/fcm-logo-main.png" /> </image>
+            </ImageView>
+        </center>
+        <right>
+            <HBox alignment="CENTER_RIGHT" spacing="15">
+                <VBox alignment="CENTER_RIGHT">
+                    <Label fx:id="clubNameLabel" text="[clubname]" style="-fx-text-fill: white; -fx-font-size: 20; -fx-font-weight: bold;"/>
+                    <Label fx:id="clubNationLabel" text="[clubnation]" style="-fx-text-fill: white; -fx-font-size: 16;"/>
+                </VBox>
+                <ImageView fx:id="clubLogoView" fitHeight="70.0" fitWidth="70.0" preserveRatio="true"/>
+            </HBox>
+        </right>
+    </BorderPane>
+
+    <StackPane VBox.vgrow="ALWAYS">
+        <VBox maxWidth="600.0" maxHeight="500.0" spacing="25" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);">
+            <padding> <Insets top="40" right="50" bottom="40" left="50"/> </padding>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Update Technical Details:" style="-fx-text-fill: #006ddb; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                <Label fx:id="playerNameHeader" style="-fx-text-fill: #2c3e50; -fx-font-size: 24; -fx-font-weight: bold;"/>
+            </HBox>
+            <Separator />
+
+            <VBox spacing="20">
+                <VBox spacing="8">
+                    <Label text="SHIRT NUMBER" style="-fx-text-fill: #7f8c8d; -fx-font-weight: bold; -fx-font-size: 12;"/>
+                    <TextField fx:id="shirtNumberField" prefHeight="40.0" maxWidth="150.0" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                </VBox>
+
+                <VBox spacing="8">
+                    <Label text="MEDICAL STATUS" style="-fx-text-fill: #7f8c8d; -fx-font-weight: bold; -fx-font-size: 12;"/>
+                    <ComboBox fx:id="medicalStatusCombo" prefHeight="40.0" prefWidth="Infinity" promptText="Select Status..."/>
+                </VBox>
+
+                <VBox spacing="8">
+                    <Label text="POSITIONS (Hold CTRL for multiple)" style="-fx-text-fill: #7f8c8d; -fx-font-weight: bold; -fx-font-size: 12;"/>
+                    <ListView fx:id="positionsListView" prefHeight="150.0" style="-fx-background-radius: 5;"/>
+                </VBox>
+            </VBox>
+
+            <HBox alignment="CENTER_RIGHT" spacing="15">
+                <Button fx:id="updateBtn" text="Save Changes" prefHeight="40.0" prefWidth="180.0"
+                        style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+            </HBox>
+        </VBox>
+    </StackPane>
+</VBox>

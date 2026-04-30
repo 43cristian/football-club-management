@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iss.controller.AdminDashboardController">
+
+    <VBox prefWidth="500.0" spacing="10">
+        <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+        </padding>
+
+        <Label text="Add New Club" />
+        <TextField fx:id="nameField" promptText="Club Name" />
+        <TextField fx:id="nationField" promptText="Nation" />
+
+        <HBox spacing="10">
+            <Button fx:id="addLogoBtn" text="Add Logo" />
+            <Label fx:id="logoPathLabel" text="No file selected" />
+        </HBox>
+
+        <Label text="Primary Color:" />
+        <ColorPicker fx:id="primaryColorPicker" />
+
+        <Label text="Secondary Color:" />
+        <ColorPicker fx:id="secondaryColorPicker" />
+
+        <Button fx:id="saveClubBtn" text="Add Club" />
+    </VBox>
+
+    <Separator orientation="VERTICAL" />
+
+    <VBox prefWidth="500.0" spacing="10">
+        <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+        </padding>
+
+        <Label text="Clubs in database" />
+        <TableView fx:id="clubsTable" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="colName" prefWidth="200" text="Club Name" />
+                <TableColumn fx:id="colNation" prefWidth="200" text="Nation" />
+            </columns>
+        </TableView>
+
+        <Separator />
+
+        <Label text="Club Accounts" />
+        <TableView fx:id="accountsTable" prefHeight="150">
+            <columns>
+                <TableColumn fx:id="colUsername" prefWidth="150" text="Username" />
+                <TableColumn fx:id="colUserType" prefWidth="150" text="User type" />
+            </columns>
+        </TableView>
+
+        <HBox spacing="5">
+            <TextField fx:id="accUserField" promptText="Username" prefWidth="100"/>
+            <PasswordField fx:id="accPassField" promptText="Password" prefWidth="100"/>
+            <ComboBox fx:id="userTypeBox" promptText="Select user type" prefWidth="130" />
+            <Button fx:id="addAccBtn" prefHeight="26.0" prefWidth="103.0" text="Add" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Button fx:id="updateAccBtn" text="Update" prefWidth="300"/>
+            <Button fx:id="deleteAccBtn" text="Delete" prefWidth="300"/>
+        </HBox>
+    </VBox>
+
+</HBox>
