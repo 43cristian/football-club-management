@@ -1,4 +1,5 @@
 # Football Club Management App
+![FCM Logo](src/main/resources/images/fcm-logo-main.jpg)
 
 Desktop application for managing a football club.
 Developed as a lab project for the Software Engineering class.
